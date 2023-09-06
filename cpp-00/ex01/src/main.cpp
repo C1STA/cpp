@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 08:12:09 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/06 23:06:21 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/06 23:25:08 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	main()
 		getline(std::cin, Repository.prompt);
 		if (Repository.prompt == "ADD")
 			Repository.add();
-		else if (Repository.prompt == "SEARCH")
+		if (Repository.prompt == "SEARCH")
 			Repository.search();
-		else if (Repository.prompt == "EXIT")
+		if (Repository.prompt == "EXIT")
 			if (Repository.exit())
 				return (0);
 	}
