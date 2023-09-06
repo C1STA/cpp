@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 05:52:38 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/06 22:47:12 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/06 23:21:41 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	PhoneBook::add()
 	setContact();
 	i++;
 }
-static void	printBordure()
+static void	printBorder()
 {
 	std::cout << "+";
 	std::cout << std::setw(10) << std::setfill('-') << '-';
@@ -53,7 +53,7 @@ static void	printBordure()
 static void	printColumn()
 {
 	
-	printBordure();
+	printBorder();
 	std::cout << "|";
 	std::cout << std::setw(10) << std::setfill(' ') << std::right << "INDEX";
 	std::cout << "|";
@@ -63,7 +63,7 @@ static void	printColumn()
 	std::cout << "|";
 	std::cout << std::setw(10) << std::setfill(' ') << std::right << "NICKNAME";
 	std::cout << "|" << std::endl;
-	printBordure();
+	printBorder();
 }
 
 void	PhoneBook::displayContact()
@@ -113,7 +113,7 @@ void	PhoneBook::search()
 		std::cout << "|";
 		std::cout << std::setw(10) << std::setfill(' ') << std::right << (j + 1);
 		contact[j].search_print();
-		printBordure();
+		printBorder();
 		j++;
 	}
 	displayContact();
