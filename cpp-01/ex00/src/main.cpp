@@ -5,31 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 08:12:09 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/07 10:50:06 by wcista           ###   ########.fr       */
+/*   Created: 2023/09/07 10:02:48 by wcista            #+#    #+#             */
+/*   Updated: 2023/09/07 12:50:58 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Contact-class.hpp"
-#include "../inc/PhoneBook-class.hpp"
+#include "../inc/Zombie.hpp"
 
 int	main()
 {
-	PhoneBook	Repository;
+	Zombie	*z1 = newZombie("Michael");
+	if (!z1)
+		return (std::cerr << "bad alloc" << std::endl, 1);
 
-	std::cout << "Welcome to your awesome phonebook !" << std::endl;
-	std::cout << "Available commands are : ADD, SEARCH and EXIT" << std::endl;
-	while (1)
-	{
-		std::cout << "PhoneBook: ";
-		getline(std::cin, Repository.prompt);
-		if (Repository.prompt == "ADD")
-			Repository.add();
-		if (Repository.prompt == "SEARCH")
-			Repository.search();
-		if (Repository.prompt == "EXIT")
-			if (Repository.exit())
-				return (0);
-	}
+	z1->announce();
+	randomChump("Brandon");
+	delete z1;
 	return (0);
 }
