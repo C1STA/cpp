@@ -6,13 +6,14 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:18:29 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/12 01:18:15 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/12 16:17:44 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstring>
 
 std::string	replaceAll(std::string input, const std::string& s1, const std::string& s2)
 {
