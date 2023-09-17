@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 08:12:09 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/07 10:50:06 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/18 01:34:31 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main()
 	{
 		std::cout << "PhoneBook: ";
 		getline(std::cin, Repository.prompt);
+		if (std::cin.eof() || std::cin.fail())
+			return (std::cout << "Wrong input!" << std::endl, 1);
 		if (Repository.prompt == "ADD")
 			Repository.add();
 		if (Repository.prompt == "SEARCH")
