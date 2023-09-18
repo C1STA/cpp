@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 02:08:45 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/18 02:19:25 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/18 09:35:21 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	Dog();
 	Dog(const Dog& other);
 	Dog&	operator=(const Dog& src);
-	virtual ~Dog();
+	~Dog();
 
 	void	makeSound() const;
 };

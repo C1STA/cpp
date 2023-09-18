@@ -6,14 +6,18 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 02:50:39 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/18 03:03:33 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/18 09:53:44 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type("WrongAnimal") {
+WrongAnimal::WrongAnimal() : type("Wrong Animal") {
 	std::cout << "Default Wrong Animal constructor called." << std::endl;
+}
+
+WrongAnimal::WrongAnimal(const std::string& type) : type(type) {
+	std::cout << "Wrong Animal overload constructor called." << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other) {

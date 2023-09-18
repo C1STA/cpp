@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 20:19:22 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/17 22:49:18 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/18 09:30:23 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ public:
 	ClapTrap(const std::string& name);
 	ClapTrap(const ClapTrap& other);
 	ClapTrap&	operator=(const ClapTrap& src);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
-	void	attack(const std::string& target);
+	virtual void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int anount);
 };

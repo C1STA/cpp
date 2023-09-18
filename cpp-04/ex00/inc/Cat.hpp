@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 02:21:51 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/18 02:22:22 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/18 09:35:18 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	Cat();
 	Cat(const Cat& other);
 	Cat&	operator=(const Cat& src);
-	virtual ~Cat();
+	~Cat();
 
 	void	makeSound() const;
 };

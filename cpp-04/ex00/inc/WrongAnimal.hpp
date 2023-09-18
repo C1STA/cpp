@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 02:47:19 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/18 03:03:15 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/18 10:43:46 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ class WrongAnimal {
 		std::string	type;
 	public:
 		WrongAnimal();
+		WrongAnimal(const std::string& type);
 		WrongAnimal(const WrongAnimal& other);
 		WrongAnimal&	operator=(const WrongAnimal& src);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 
-		void	makeSound() const;
+		virtual void	makeSound() const;
 		std::string	getType() const;
 };
 

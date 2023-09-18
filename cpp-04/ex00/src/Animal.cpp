@@ -6,7 +6,7 @@
 /*   By: wcista <wcista@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:46:53 by wcista            #+#    #+#             */
-/*   Updated: 2023/09/18 02:16:02 by wcista           ###   ########.fr       */
+/*   Updated: 2023/09/18 09:57:42 by wcista           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Animal::~Animal() {
 }
 
 void	Animal::makeSound() const {
-	std::cout << "Animal makes a sound." << std::endl;
+	std::cout << "An Animal makes a sound." << std::endl;
 }
 
 std::string	Animal::getType() const {
