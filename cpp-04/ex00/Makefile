@@ -49,4 +49,3 @@ re : fclean
 	make all
 
 .PHONY : all clean fclean re bonus
-.SILENT :

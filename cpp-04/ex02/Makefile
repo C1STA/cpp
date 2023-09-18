@@ -1,13 +1,16 @@
-NAME = fragtrap
+NAME = abstract
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCPATH = src/
 SRC = main.cpp \
-	ClapTrap.cpp \
-	ScavTrap.cpp \
-	FragTrap.cpp
+	A_Animal.cpp \
+	Cat.cpp \
+	Dog.cpp \
+	WrongAnimal.cpp \
+	WrongCat.cpp \
+	Brain.cpp
 
 OBJDIR = obj/
 OBJ = $(addprefix $(OBJDIR), $(SRC:.cpp=.o))
@@ -18,7 +21,7 @@ DEP = $(addprefix $(DEPDIR), $(SRC:.cpp=.d))
 all : $(NAME)
 
 $(NAME): $(OBJ)
-	echo "\033[36mMaking FragTrap\033[0m"
+	echo "\033[36mMaking Abstract Class\033[0m"
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	echo "\033[32mDone\033[0m"
 
@@ -33,13 +36,13 @@ $(DEPDIR)%.d : $(SRCPATH)%.cpp
 -include $(DEP)
 
 clean :
-	echo "\033[35mCleaning FragTrap objects and dependencies ...\033[0m"
+	echo "\033[35mCleaning Abstract Class objects and dependencies ...\033[0m"
 	rm -rf $(OBJDIR) $(DEPDIR)
 	echo "\033[32mDone\033[0m"
 
 fclean :
 	make clean
-	echo "\033[35mCleaning FragTrap program...\033[0m"
+	echo "\033[35mCleaning Abstract Class program...\033[0m"
 	rm -f $(NAME)
 	echo "\033[32mDone\033[0m"
 
